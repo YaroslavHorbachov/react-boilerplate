@@ -1,0 +1,57 @@
+{
+  "name": "ts_001",
+  "version": "1.0.0",
+  "description": "Starter project for React, with Typescript && .tsx support",
+  "private": true,
+  "scripts": {
+    "build": "tsc --emitDeclarationOnly --jsx react && babel src --out-dir _babel_dist --extensions \".ts,.tsx,.jsx\"",
+    "type-check": "tsc --noEmit",
+    "bundle": "webpack --mode development",
+    "start": "webpack-dev-server --hot --mode development --port 3010"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.0.0-beta.49",
+    "@babel/core": "^7.0.0-beta.49",
+    "@babel/plugin-proposal-class-properties": "^7.0.0-beta.49",
+    "@babel/plugin-proposal-decorators": "^7.1.2",
+    "@babel/plugin-proposal-object-rest-spread": "^7.0.0-beta.49",
+    "@babel/preset-env": "^7.0.0-beta.49",
+    "@babel/preset-react": "^7.0.0-beta.49",
+    "@babel/preset-typescript": "^7.0.0-beta.49",
+    "awesome-typescript-loader": "^5.2.0",
+    "babel-loader": "^8.0.0-beta.2",
+    "clean-webpack-plugin": "^0.1.19",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "source-map-loader": "^0.2.3",
+    "typescript": "^2.9.2",
+    "webpack": "^4.16.0",
+    "webpack-cli": "^3.0.8",
+    "webpack-dev-server": "^3.1.4"
+  },
+  "babel": {
+    "presets": [
+      "@babel/env",
+      "@babel/typescript",
+      "@babel/react"
+    ],
+    "plugins": [
+      "@babel/proposal-class-properties",
+      "@babel/proposal-object-rest-spread",
+      [
+        "@babel/plugin-proposal-decorators",
+        {
+          "legacy": true
+        }
+      ]
+    ]
+  },
+  "dependencies": {
+    "@types/react": "^16.4.6",
+    "@types/react-dom": "^16.0.6",
+    "moment": "^2.22.2",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1"
+  }
+}
